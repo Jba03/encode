@@ -23,9 +23,6 @@ static AVCodecContext* i_acodec_ctx; /* Audio decoder context */
 static AVCodecContext* o_vcodec_ctx; /* Video encoder context */
 static AVCodecContext* o_acodec_ctx; /* Audio encoder context */
 
-int (*decode)(AVCodecContext*, AVFrame*, int*, const AVPacket*);
-int (*encode)(AVCodecContext*, AVPacket*, const AVFrame*, int*);
-
 static struct SwsContext* sws_ctx;
 static AVFrame* scaled_frame;
 
